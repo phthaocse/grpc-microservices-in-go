@@ -1,11 +1,13 @@
 #!/bin/bash
 
-sudo apt-get install -y protobuf-compiler golang-goprotobuf-dev
+#sudo apt-get install -y protobuf-compiler golang-goprotobuf-dev
 
 echo "Installing protoc go and grpc modules..."
 
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+go get -u github.com/golang/protobuf/protoc-gen-go
+
 
 echo "Generating Payment Service Stubs..."
 
